@@ -168,7 +168,7 @@ class StoryImageState extends State<StoryImage> {
   void forward() async {
     this._timer?.cancel();
 
-    if (widget.controller != null && widget.controller!.playbackNotifier.value == PlaybackState.pause) {
+    if (widget.controller != null && widget.controller!.playbackNotifier.stream.value == PlaybackState.pause) {
       return;
     }
 
